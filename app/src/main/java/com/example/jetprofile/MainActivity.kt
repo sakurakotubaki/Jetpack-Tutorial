@@ -9,6 +9,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color// Textのカラーはこれをimportする
@@ -51,11 +52,29 @@ class MainActivity : ComponentActivity() {
                         Spacer(modifier = Modifier.height(20.dp))
                         // 職業
                         Text(
-                            text = "職業",
+                            text = "職業: ソフトウェアエンジニア",
                             color = Color.Gray,
                             fontSize = 16.sp,
                             fontWeight = FontWeight.ExtraBold,
                         )
+                        Spacer(modifier = Modifier.height(20.dp))
+
+                        Column(
+                            horizontalAlignment = Alignment.Start,
+                            modifier = Modifier.fillMaxWidth(),
+                            ) {
+                            // 会社名
+                            Text(
+                                text = "Google",
+                                fontSize = 26.sp,
+                                fontWeight = FontWeight.Bold,
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+                            // 部署・グループ名
+                            Text(text = "Android開発部",
+                                color = Color.Gray,
+                                fontSize = 16.sp)
+                        }
                     }
                 }
             }
