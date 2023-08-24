@@ -29,6 +29,13 @@ class MainActivity : ComponentActivity() {
                         fontSize = 20.sp,
                         fontWeight = FontWeight.ExtraBold,
                         )
+
+                    Text(
+                        text = "職業",
+                        color = Color.Gray,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                    )
                 }
             }
         }
