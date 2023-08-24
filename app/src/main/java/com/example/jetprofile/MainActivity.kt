@@ -5,7 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -41,6 +43,7 @@ fun MainContent() {
     Column(
         horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally,
         modifier = Modifier.padding(20.dp)
+        .verticalScroll(rememberScrollState()),
     ) {
         // プロフィール画像
         Image(
@@ -77,7 +80,7 @@ fun MainContent() {
         Button(
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(
-                backgroundColor = Color(0xFFF85F6A)
+                backgroundColor = Color.Blue,
             ),
             onClick = { isShowDetail = !isShowDetail }) {
             Text(text = "詳細を表示", color = Color.White)
